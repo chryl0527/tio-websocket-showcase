@@ -35,10 +35,10 @@ public class ShowcaseWebsocketStarter {
 //            String keyStoreFile = "classpath:config/ssl/keystore.jks";
 //            String trustStoreFile = "classpath:config/ssl/keystore.jks";
 //            String keyStorePwd = "214323428310224";
-            String keyStoreFile = P.get("ssl.keystore", null);
-            String trustStoreFile = P.get("ssl.truststore", null);
-            String keyStorePwd = P.get("ssl.pwd", null);
-            serverGroupContext.useSsl(keyStoreFile, trustStoreFile, keyStorePwd);
+//            String keyStoreFile = P.get("ssl.keystore", null);
+//            String trustStoreFile = P.get("ssl.truststore", null);
+//            String keyStorePwd = P.get("ssl.pwd", null);
+//            serverGroupContext.useSsl(keyStoreFile, trustStoreFile, keyStorePwd);
         }
     }
 
