@@ -67,11 +67,20 @@ public class ShowcaseWsMsgHandler implements IWsMsgHandler {
     }
 
     /**
-     * 当客户端发close flag时，会走这个方法
+     * 当客户端发close flag时，会走这个方法===================
      */
     @Override
     public Object onClose(WsRequest wsRequest, byte[] bytes, ChannelContext channelContext) throws Exception {
         Tio.remove(channelContext, "receive close flag");
+
+        //客户 退出群发消息
+//        Tio.bindGroup(channelContext, Const.GROUP_ID);
+//        int count = Tio.getAllChannelContexts(channelContext.groupContext).getObj().size();
+//        String msg = "{name:'admin',message:'" + channelContext.userid + " 离开了，共【" + count + "】人在线" + "'}";
+//
+//        WsResponse wsResponse = WsResponse.fromText(msg, ShowcaseServerConfig.CHARSET);
+//        //群发
+//        Tio.sendToGroup(channelContext.groupContext, Const.GROUP_ID, wsResponse);
         return null;
     }
 
