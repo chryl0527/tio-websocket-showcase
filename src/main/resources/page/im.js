@@ -29,6 +29,7 @@ function randomNum(minNum, maxNum) {
 }
 function initWs() {
     myname = getRandomName();
+    <!-- request.getParam("name")  获取ws传送的name -->
     var queryString = 'name=' + myname;
 
     var param = "";
